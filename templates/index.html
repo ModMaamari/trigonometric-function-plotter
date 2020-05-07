@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    </head>
+<body>
+    <div>
+        <form action = "#", method="post">
+            <div class="container">
+    
+                <div class="row">
+                  <div class="col-md-auto">
+                    <div name = "Image">
+                        <img src="/image-{{funcV}},{{amp}},{{freq}}.png" class="rounded mx-auto d-block" width= 80% alt="Your Graph">
+                    </div>
+                  </div>
+                </div>
+    
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="function">Function</label>
+                            <select class="form-control" name ="function" id="function">
+                                <option value = sin {{"selected" if func["sin"]}}>Sin</option>
+                                <option value = cos {{"selected" if func["cos"]}}>Cos</option>
+                                <option value = tan {{"selected" if func["tan"]}}>Tan</option>
+                                <!-- <option value = cot {{"selected" if func["cot"]}}>Cot</option> -->
+                            </select>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="amplitude">Amplitude</label>
+                            <input type="range" name="amplitude" id="amplitudeId" value={{amp}} min="1" max="10" oninput="amplitudeOutputId.value = amplitudeId.value">
+                            <output name="amplitudeOutput" id="amplitudeOutputId">{{amp}}</output>
+                          </div>
+                    </div>
+                </div>
+    
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="frequency">Frequency</label>
+                            <input type="range" name="frequency" id="frequency" value={{freq}} min="1" max="10" oninput="frequencyOutputId.value = frequency.value">
+                            <output name="frequencyOutputName" id="frequencyOutputId">{{freq}}</output>
+                          </div>
+                    </div>
+                </div>
+                <div class="row justify-content-md-center">
+                    <div class="col-md-auto"><button type="submit" class="btn btn-primary btn-lg btn-block">Plot</button></div>
+                </div>
+              </div>
+                
+          </form>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+
+
+</html>
